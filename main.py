@@ -14,9 +14,9 @@ from openpyxl.cell.cell import Cell
 
 
 WORKBOOK_URL = os.getenv("WORKBOOK_URL", "https://aresep-my.sharepoint.com/:x:/g/personal/multimedia_aresep_go_cr/ET6L4k-QyphAgLpEwSYeNegBbLvOGM7mF0n2vZxId_SGeQ?e=YGhFZr&download=1")
-WORKBOOK_PATH =  os.getenv("WORKBOOK_PATH", "/kaggle/input/datasets/slothkong/electricity-tariffs-costa-rica/Cuadro E-8 Tarifas electricas final.xlsx")
-CONFIG_PATH = os.getenv("CONFIG_PATH", "/kaggle/working/cfgs.yaml")
-DATAFRAME_PATH = os.getenv("DATAFRANE_PATH", "/kaggle/working/electricity-tariffs-costa-rica.csv")
+WORKBOOK_PATH =  os.getenv("WORKBOOK_PATH", "./kaggle/input/datasets/slothkong/electricity-tariffs-costa-rica/Cuadro E-8 Tarifas electricas final.xlsx")
+CONFIG_PATH = os.getenv("CONFIG_PATH", "./kaggle/working/cfgs.yaml")
+DATAFRAME_PATH = os.getenv("DATAFRANE_PATH", "./kaggle/working/electricity-tariffs-costa-rica.csv")
 MONTH_MAPPING = {"enero": "01", "febrero": "02", "marzo": "03", "abril": "04", "mayo": "05", "junio": "06", "julio": "07", "agosto": "08", "septiembre": "09", "octubre": "10", "noviembre": "11", "diciembre": "12"}
 
 def download_workbook(workbook_url: str, workbook_path: str) -> None:
