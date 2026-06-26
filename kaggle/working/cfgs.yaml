@@ -1,0 +1,43 @@
+---
+worksheets:
+  CAR 2013:
+    ranges:
+      T-RE:
+        range: A10:M11
+  CG 2013:
+    ranges:
+      T-RE:
+        range: A10:M11
+  CL 2013:
+    ranges:
+      T-RE:
+        range: A10:M11
+  CNFL 2013:
+    ranges:
+      T-RE:
+        range: A9:M11
+  ESPH 2013:
+    ranges:
+      T-RE:
+        range: A10:M11
+  ICE 2013:
+    ranges:
+      T-RE:
+        range: A43:M45
+  JASEC 2013:
+    ranges:
+      T-RE:
+        range: A9:M10
+month_mapping:
+  abril: '04'
+  agosto: 08
+  diciembre: '12'
+  enero: '01'
+  febrero: '02'
+  julio: '07'
+  junio: '06'
+  marzo: '03'
+  mayo: '05'
+  noviembre: '11'
+  octubre: '10'
+  septiembre: 09
