@@ -51,7 +51,16 @@ python main.py
 
 ## Configuration
 
-To properly parse the contents of Excel workbooks, this tooling relias on user-provider configuration about which cell ranges are processed. Checkout the [cfgs.yaml](./kaggle/working/cfgs.yaml) file for details.
+To properly parse the contents of Excel workbooks, this tooling relias on user-provider configuration about which cell ranges are processed.
+The configuration follows the schemae:
+```yaml
+worksheets:
+  <name of a worksheet>:         # Example: "CNFL 2023"
+    ranges:
+      <name above an specific cell range>: # Example: "T-RE" (i.e. acronym of residential tariff)
+        range: <specifc cell range>        # Example: "A9:M11"
+```
+Checkout the [cfgs.yaml](./kaggle/working/cfgs.yaml) file to see the complete configuration.
 
 
 
