@@ -81,7 +81,7 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
     with open(config_path, "r") as fp:
         cfgs = yaml.safe_load(fp)
 
-    workbook = load_workbook(workbook_path)
+    workbook = load_workbook(workbook_path, data_only=True)
     for worksheet_title, worksheets_cfg in cfgs["worksheets"].items():
 
         worksheet = select_worksheet(worksheet_title, workbook)
