@@ -66,7 +66,7 @@ worksheets:
   CG 2015:
     ranges:
       T-RE:
-        range: ''
+        range: A10:M11
   CG 2016:
     ranges:
       T-RE:
@@ -318,7 +318,7 @@ worksheets:
   ESPH 2023:
     ranges:
       T-RE:
-        range: A10:M12
+        range: A10:M22
   ESPH 2024:
     ranges:
       T-RE:
