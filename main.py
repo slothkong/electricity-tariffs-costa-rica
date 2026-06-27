@@ -96,7 +96,7 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
             tmp_dataframe["annio"] = year
             tmp_dataframe["tipo_de_tarifa"] = tariff_type
             tmp_dataframe["distribuidor"] = distributor_acronym
-            tmp_dataframe["annio_mes"] = tmp_dataframe["mes"].apply(lambda x: f"{year}_{MONTH_MAPPING.get(x)}")
+            tmp_dataframe["annio_mes"] = tmp_dataframe["mes"].apply(lambda x: f"{year}-{MONTH_MAPPING.get(x)}")
             tmp_dataframe = tmp_dataframe[column_names]
 
             if is_initial_loop:
