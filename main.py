@@ -115,7 +115,7 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
             else:
                 dataframe = pandas.concat([dataframe, tmp_dataframe], ignore_index=True)
 
-
+    dataframe.dropna(subset=["colones_por_kwh"], inplace=True)
     dataframe.sort_values(by=column_names[0:-1], inplace=True)
     return dataframe
 
