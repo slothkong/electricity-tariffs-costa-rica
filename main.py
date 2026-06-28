@@ -48,6 +48,7 @@ def select_worksheet(worksheet_title: str, workbook: Workbook) -> Worksheet:
 def pivot_table(cell_range: tuple[Cell,])-> DataFrame:
 
     column_names = ["bloque_de_tarifa"] + [month for month in MONTH_MAPPING.keys()]
+    column_types_mapping = dict({column_names[0]: "str"}) | dict(zip(column_names[1:], ["float64"] * len(column_names[1:])))
 
     for row_idx in range(len(cell_range)):
         values = []
@@ -59,7 +60,12 @@ def pivot_table(cell_range: tuple[Cell,])-> DataFrame:
             data=numpy.array(values).T,
             columns=column_names
         )
-    
+
+        if record.empty:
+            raise ValueError("Unable to extract valid data from user-defined cell range!")
+
+        record = record.astype(column_types_mapping)
+        
         if row_idx == 0:
             dataframe = record
         else:
@@ -86,8 +92,9 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
 
         worksheet = select_worksheet(worksheet_title, workbook)
         for tariff_type, worksheet_cfg in worksheets_cfg["ranges"].items():
-
+            
             cell_range = worksheet_cfg["range"]
+            print(f"Processing range '{cell_range}' from worksheet '{worksheet_title}'...")
 
             year = worksheet_title.split(" ")[1]
             distributor_acronym = worksheet_title.split(" ")[0]
@@ -105,7 +112,6 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
             else:
                 dataframe = pandas.concat([dataframe, tmp_dataframe], ignore_index=True)
 
-            print(f"Successfully processed range '{cell_range}' from worksheet '{worksheet_title}'")
 
     dataframe.sort_values(by=column_names[0:-1], inplace=True)
     return dataframe
