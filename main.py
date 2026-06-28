@@ -65,6 +65,7 @@ def pivot_table(cell_range: tuple[Cell,])-> DataFrame:
             raise ValueError("Unable to extract valid data from user-defined cell range!")
 
         record = record.astype(column_types_mapping)
+        record = record.replace(0, numpy.nan)
         
         if row_idx == 0:
             dataframe = record
