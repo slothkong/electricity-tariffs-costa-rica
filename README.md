@@ -17,14 +17,14 @@ Primeros 200 KWh  72     72       72     72     72    78     75     75      75  
 kWh adicional     93     93       93     101    101   101    97     97      97          84        82         82
 ```
 
-to single standard wide table of fix width (i.e. 4 dimensions and 1 metric):
+to single standard wide table of fix width (i.e. 6 dimensions and 1 metric):
 ```
-annio_mes  distribuidor  tipo_de_tarifa  bloque_de_tarifa  colones_por_kwh
-2013-01    CAR           T-RE            Primeros 200 KWh  72
-2013-01    CAR           T-RE            kWh adicional     93
-...        ...           ...             ...               ...
-2013-12    CAR           T-RE            Primeros 200 KWh  63
-2013-12    CAR           T-RE            kWh adicional     82
+annio_mes  annio  mes  distribuidor  tipo_de_tarifa  bloque_de_tarifa  colones_por_kwh
+2013-01    2013   01   CAR           T-RE            Primeros 200 KWh  72
+2013-01    2013   01   CAR           T-RE            kWh adicional     93
+...        ...    ...  ...           ...             ...               ...
+2013-12    2013   12   CAR           T-RE            Primeros 200 KWh  63
+2013-12    2013   12   CAR           T-RE            kWh adicional     82
 ```
 
 ## Usage
@@ -52,7 +52,7 @@ To properly parse the contents of Excel workbooks, this tooling relias on user-p
 The configuration follows the schemae:
 ```yaml
 worksheets:
-  <name of a worksheet>:         # Example: "CNFL 2023"
+  <name of a worksheet>:                   # Example: "CNFL 2023"
     ranges:
       <name above an specific cell range>: # Example: "T-RE" (i.e. acronym of residential tariff)
         range: <specifc cell range>        # Example: "A9:M11"
