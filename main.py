@@ -84,7 +84,7 @@ def pivot_table(cell_range: tuple[Cell,])-> DataFrame:
 
 def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataFrame:
 
-    column_names = ["annio_mes", "distribuidor", "tipo_de_tarifa", "bloque_de_tarifa", "colones_por_kwh"]
+    column_names = ["annio_mes", "annio", "mes", "distribuidor", "tipo_de_tarifa", "bloque_de_tarifa", "colones_por_kwh"]
     is_initial_loop = True
 
     with open(config_path, "r") as fp:
@@ -107,6 +107,7 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
             tmp_dataframe["tipo_de_tarifa"] = tariff_type
             tmp_dataframe["distribuidor"] = distributor_acronym
             tmp_dataframe["annio_mes"] = tmp_dataframe["mes"].apply(lambda x: f"{year}-{MONTH_MAPPING.get(x)}")
+            tmp_dataframe["mes"] = tmp_dataframe["mes"].apply(lambda x: f"{MONTH_MAPPING.get(x)}")
             tmp_dataframe = tmp_dataframe[column_names]
 
             if is_initial_loop:
@@ -128,6 +129,7 @@ def main() -> None:
     
     dataframe.to_csv(DATAFRAME_PATH, index=False)
     print(f"Successfully wrote dataframe to '{DATAFRAME_PATH}'")
+
 
 
 if __name__ == "__main__":
