@@ -48,6 +48,8 @@ python main.py
 
 ## Configuration
 
+> **NOTE**: As of version `0.0.1`, configured cell ranges INCLUDE ONLY residential tariff data.
+
 To properly parse the contents of Excel workbooks, this tooling relias on user-provider configuration about which cell ranges are processed.
 The configuration follows the schemae:
 ```yaml
