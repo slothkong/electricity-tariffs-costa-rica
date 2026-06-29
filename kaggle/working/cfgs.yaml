@@ -1,3 +1,5 @@
+# As of version 0.0.1, configured cell ranges INCLUDE ONLY residential tariff data.
+---
 worksheets:
   CAR 2013:
     ranges:
