@@ -1,4 +1,5 @@
-# Costa Rica's Electricity Tariffs
+# Electricity Tariffs Costa Rica
+
 Costa Rica's ["Authoridad Reguladora de los Servicios Publicos" (ARASEP)](https://aresep.go.cr/) publishes historical records and charts on electricity pricing.
 Although while said data is of relative good quality, it is somewhat hard to work with, when using open-source analytics tooling. Some of the main hurdles are:
 * **Proprietary format**: Published as an Excel workbook
