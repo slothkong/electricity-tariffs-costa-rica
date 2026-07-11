@@ -1,7 +1,8 @@
 # Demo Dashboard
 
-A demo [Dash](https://dash.plotly.com/) application to visualize 
-Demo Dash app to visualize the [Electricity Tariffs Costa Rica Kaggle Dataset](https://www.kaggle.com/datasets/slothkong/electricity-tariffs-costa-rica).
+A demo [Dash](https://dash.plotly.com/) application to visualize the [Electricity Tariffs Costa Rica Kaggle Dataset](https://www.kaggle.com/datasets/slothkong/electricity-tariffs-costa-rica).
+
+![Demo Dashboard Screenshot](./docs/figures/demo_dashboard_sreenshot.jpg)
 
 ## Before You Begin
 
