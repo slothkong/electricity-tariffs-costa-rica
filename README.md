@@ -1,16 +1,17 @@
 # Electricity Tariffs Costa Rica
 
-Costa Rica's ["Authoridad Reguladora de los Servicios Publicos" (ARASEP)](https://aresep.go.cr/) publishes historical records and charts on electricity pricing.
-Although while said data is of relative good quality, it is somewhat hard to work with, when using open-source analytics tooling. Some of the main hurdles are:
-* **Proprietary format**: Published as an Excel workbook
-* **Non-standard structure**: Data from each distribution company spreads across multiple worksheets. Futhermore, tariff data is framed within tables of variable column count (i.e. months as columns/metrics)
-* **Buggy and/or misleading visualization**: As of June 2026, the PowerBI visualizations embedded on the [ARASEP's website](https://aresep.go.cr/electricidad/tarifas/) does not properly reflect average tariff prices per distribution company or across years
+[ARASEP](https://en.wikipedia.org/wiki/Autoridad_Reguladora_de_Servicios_P%C3%BAblicos), the regularity institution of Costa Rica's energy prices,  publishes historical records and charts on the country's electricity pricing. Although said data is of relative good quality, it is also somewhat difficult to work with when using open-source analytics tooling:
 
-Tooling in this repository contains is used to create/update the ["Costa Rica's Electricity Tariffs" Kaggle Dataset](https://www.kaggle.com/datasets/slothkong/electricity-tariffs-costa-rica), which aims at addressing the aforementioned challenges.
+- **Proprietary format:** Published as an Excel workbook
+- **Non-standard structure:** Data from each distribution company spreads across multiple worksheets. Furthermore, tariff data is framed within tables of variable column count (i.e. months as columns/metrics)
+- **Buggy and region-locked visualization:** As of June 2026, the PowerBI visualizations embedded on the [ARASEP's website](https://aresep.go.cr/electricidad/tarifas/) does not properly reflect average tariff prices per distribution company or across years. The site appears to be also reachable only form national IP addresses.
+
+
+This repository includes tooling is used to create/update/visualize the ["Electricity Tariffs Costa Rica" Kaggle Dataset](https://www.kaggle.com/datasets/slothkong/electricity-tariffs-costa-rica), in an attempt to address the aforementioned challenges.
 
 ## Features 
 
-Enables convertiion of ARESEP's published worksheets into a more convenient data structures, essentially going from multiple tales of variable width:
+Enables conversion of ARESEP's published worksheets into a more convenient data structures, essentially going from multiple tales of variable width:
 
 ```
 T-RE              Enero  Febrero  Marzo  Abril  Mayo  Junio  Julio  Agosto  Septiembre  Octrubre  Noviembre  Deciembre   
