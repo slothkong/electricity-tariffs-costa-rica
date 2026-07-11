@@ -21,7 +21,7 @@ kWh adicional     93     93       93     101    101   101    97     97      97  
 
 to single standard wide table of fix width (i.e. 6 dimensions and 1 metric):
 ```
-annio_mes  annio  mes  distribuidor  tipo_de_tarifa  bloque_de_tarifa  colones_por_kwh
+annio_mes  annio  mes  distribuidor  tipo_de_tarifa  bloque_de_tarifa  colones_por_unidad_de_cobro
 2013-01    2013   01   CAR           T-RE            Primeros 200 KWh  72
 2013-01    2013   01   CAR           T-RE            kWh adicional     93
 ...        ...    ...  ...           ...             ...               ...

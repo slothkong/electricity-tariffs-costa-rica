@@ -75,7 +75,7 @@ def pivot_table(cell_range: tuple[Cell,])-> DataFrame:
                             id_vars=[column_names[0]],
                             value_vars=column_names[1:],
                             var_name="mes",
-                            value_name="colones_por_kwh")
+                            value_name="colones_por_unidad_de_cobro")
 
     dataframe = dataframe.replace(0, numpy.nan)
     dataframe[column_names[0]] = dataframe[column_names[0]].str.strip()
@@ -84,7 +84,7 @@ def pivot_table(cell_range: tuple[Cell,])-> DataFrame:
 
 def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataFrame:
 
-    column_names = ["annio_mes", "annio", "mes", "distribuidor", "tipo_de_tarifa", "bloque_de_tarifa", "colones_por_kwh"]
+    column_names = ["annio_mes", "annio", "mes", "distribuidor", "tipo_de_tarifa", "bloque_de_tarifa", "colones_por_unidad_de_cobro"]
     is_initial_loop = True
 
     with open(config_path, "r") as fp:
@@ -116,7 +116,7 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
             else:
                 dataframe = pandas.concat([dataframe, tmp_dataframe], ignore_index=True)
 
-    dataframe.dropna(subset=["colones_por_kwh"], inplace=True)
+    dataframe.dropna(subset=["colones_por_unidad_de_cobro"], inplace=True)
     dataframe.sort_values(by=column_names[0:-1], inplace=True)
     return dataframe
 
