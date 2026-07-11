@@ -1,447 +1,450 @@
 # As of version 0.0.1, configured cell ranges INCLUDE ONLY residential tariff data.
 ---
-worksheets:
-  CAR 2013:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CAR 2014:
-    ranges:
-      T-RE:
-        range: A9:M10
-  CAR 2015:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CAR 2016:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2017:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2018:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2019:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2020:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2021:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2022:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2023:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2024:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2025:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CAR 2026:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2013:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CG 2014:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CG 2015:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CG 2016:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2017:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2018:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2019:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2020:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2021:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2022:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2023:
-    ranges:
-      T-RE:
-        range: A10:M14
-  CG 2024:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CG 2025:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CL 2013:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CL 2014:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CL 2015:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CL 2016:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CL 2017:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CL 2018:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CL 2019:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CL 2020:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CL 2021:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CL 2022:
-    ranges:
-      T-RE:
-        range: A10:M22
-  CL 2023:
-    ranges:
-      T-RE:
-        range: A10:M30
-  CL 2024:
-    ranges:
-      T-RE:
-        range: A10:M22
-  CL 2025:
-    ranges:
-      T-RE:
-        range: A10:M22
-  CL 2026:
-    ranges:
-      T-RE:
-        range: A10:M22
-  CNFL 2013:
-    ranges:
-      T-RE:
-        range: A9:M11
-  CNFL 2014:
-    ranges:
-      T-RE:
-        range: A8:M10
-  CNFL 2015:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CNFL 2016:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2017:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2018:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2019:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2020:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2021:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2022:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2023:
-    ranges:
-      T-RE:
-        range: A10:M14
-  CNFL 2024:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2025:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CNFL 2026:
-    ranges:
-      T-RE:
-        range: A10:M13
-  CS 2013:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CS 2014:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CS 2015:
-    ranges:
-      T-RE:
-        range: A10:M11
-  CS 2016:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2017:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2018:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2019:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2020:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2021:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2022:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2023:
-    ranges:
-      T-RE:
-        range: A10:M14
-  CS 2024:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2025:
-    ranges:
-      T-RE:
-        range: A10:M12
-  CS 2026:
-    ranges:
-      T-RE:
-        range: A10:M12
-  ESPH 2013:
-    ranges:
-      T-RE:
-        range: A10:M11
-  ESPH 2014:
-    ranges:
-      T-RE:
-        range: A10:M11
-  ESPH 2015:
-    ranges:
-      T-RE:
-        range: A10:M11
-  ESPH 2016:
-    ranges:
-      T-RE:
-        range: A10:M12
-  ESPH 2017:
-    ranges:
-      T-RE:
-        range: A10:M12
-  ESPH 2018:
-    ranges:
-      T-RE:
-        range: A10:M12
-  ESPH 2019:
-    ranges:
-      T-RE:
-        range: A10:M12
-  ESPH 2020:
-    ranges:
-      T-RE:
-        range: A10:M12
-  ESPH 2021:
-    ranges:
-      T-RE:
-        range: A10:M12
-  ESPH 2022:
-    ranges:
-      T-RE:
-        range: A10:M22
-  ESPH 2023:
-    ranges:
-      T-RE:
-        range: A10:M22
-  ESPH 2024:
-    ranges:
-      T-RE:
-        range: A10:M22
-  ESPH 2025:
-    ranges:
-      T-RE:
-        range: A10:M22
-  ESPH 2026:
-    ranges:
-      T-RE:
-        range: A10:M22
-  ICE 2013:
-    ranges:
-      T-RE:
-        range: A43:M45
-  ICE 2014:
-    ranges:
-      T-RE:
-        range: A43:M45
-  ICE 2015:
-    ranges:
-      T-RE:
-        range: A46:M47
-  ICE 2016:
-    ranges:
-      T-RE:
-        range: A62:M64
-  ICE 2017:
-    ranges:
-      T-RE:
-        range: A46:M48
-  ICE 2018:
-    ranges:
-      T-RE:
-        range: A46:M48
-  ICE 2019:
-    ranges:
-      T-RE:
-        range: A46:M48
-  ICE 2020:
-    ranges:
-      T-RE:
-        range: A46:M48
-  ICE 2021:
-    ranges:
-      T-RE:
-        range: A46:M50
-  ICE 2022:
-    ranges:
-      T-RE:
-        range: A46:M60
-  ICE 2023:
-    ranges:
-      T-RE:
-        range: A46:M58
-  ICE 2024:
-    ranges:
-      T-RE:
-        range: A46:M58
-  ICE 2025:
-    ranges:
-      T-RE:
-        range: A46:M58
-  ICE 2026:
-    ranges:
-      T-RE:
-        range: A46:M58
-  JASEC 2013:
-    ranges:
-      T-RE:
-        range: A9:M10
-  JASEC 2014:
-    ranges:
-      T-RE:
-        range: A9:M10
-  JASEC 2015:
-    ranges:
-      T-RE:
-        range: A9:M10
-  JASEC 2016:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2017:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2018:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2019:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2020:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2021:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2022:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2023:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2024:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2025:
-    ranges:
-      T-RE:
-        range: A9:M11
-  JASEC 2026:
-    ranges:
-      T-RE:
-        range: A9:M11
+workbooks:
+  - uri: https://aresep-my.sharepoint.com/:x:/g/personal/multimedia_aresep_go_cr/ET6L4k-QyphAgLpEwSYeNegBbLvOGM7mF0n2vZxId_SGeQ?e=YGhFZr&download=1
+    filename: Cuadro E-8 Tarifas electricas final.xlsx
+    worksheets:
+      CAR 2013:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CAR 2014:
+        ranges:
+          T-RE:
+            range: A9:M10
+      CAR 2015:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CAR 2016:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2017:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2018:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2019:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2020:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2021:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2022:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2023:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2024:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2025:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CAR 2026:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2013:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CG 2014:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CG 2015:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CG 2016:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2017:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2018:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2019:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2020:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2021:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2022:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2023:
+        ranges:
+          T-RE:
+            range: A10:M14
+      CG 2024:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CG 2025:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CL 2013:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CL 2014:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CL 2015:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CL 2016:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CL 2017:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CL 2018:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CL 2019:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CL 2020:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CL 2021:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CL 2022:
+        ranges:
+          T-RE:
+            range: A10:M22
+      CL 2023:
+        ranges:
+          T-RE:
+            range: A10:M30
+      CL 2024:
+        ranges:
+          T-RE:
+            range: A10:M22
+      CL 2025:
+        ranges:
+          T-RE:
+            range: A10:M22
+      CL 2026:
+        ranges:
+          T-RE:
+            range: A10:M22
+      CNFL 2013:
+        ranges:
+          T-RE:
+            range: A9:M11
+      CNFL 2014:
+        ranges:
+          T-RE:
+            range: A8:M10
+      CNFL 2015:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CNFL 2016:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2017:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2018:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2019:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2020:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2021:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2022:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2023:
+        ranges:
+          T-RE:
+            range: A10:M14
+      CNFL 2024:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2025:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CNFL 2026:
+        ranges:
+          T-RE:
+            range: A10:M13
+      CS 2013:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CS 2014:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CS 2015:
+        ranges:
+          T-RE:
+            range: A10:M11
+      CS 2016:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2017:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2018:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2019:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2020:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2021:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2022:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2023:
+        ranges:
+          T-RE:
+            range: A10:M14
+      CS 2024:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2025:
+        ranges:
+          T-RE:
+            range: A10:M12
+      CS 2026:
+        ranges:
+          T-RE:
+            range: A10:M12
+      ESPH 2013:
+        ranges:
+          T-RE:
+            range: A10:M11
+      ESPH 2014:
+        ranges:
+          T-RE:
+            range: A10:M11
+      ESPH 2015:
+        ranges:
+          T-RE:
+            range: A10:M11
+      ESPH 2016:
+        ranges:
+          T-RE:
+            range: A10:M12
+      ESPH 2017:
+        ranges:
+          T-RE:
+            range: A10:M12
+      ESPH 2018:
+        ranges:
+          T-RE:
+            range: A10:M12
+      ESPH 2019:
+        ranges:
+          T-RE:
+            range: A10:M12
+      ESPH 2020:
+        ranges:
+          T-RE:
+            range: A10:M12
+      ESPH 2021:
+        ranges:
+          T-RE:
+            range: A10:M12
+      ESPH 2022:
+        ranges:
+          T-RE:
+            range: A10:M22
+      ESPH 2023:
+        ranges:
+          T-RE:
+            range: A10:M22
+      ESPH 2024:
+        ranges:
+          T-RE:
+            range: A10:M22
+      ESPH 2025:
+        ranges:
+          T-RE:
+            range: A10:M22
+      ESPH 2026:
+        ranges:
+          T-RE:
+            range: A10:M22
+      ICE 2013:
+        ranges:
+          T-RE:
+            range: A43:M45
+      ICE 2014:
+        ranges:
+          T-RE:
+            range: A43:M45
+      ICE 2015:
+        ranges:
+          T-RE:
+            range: A46:M47
+      ICE 2016:
+        ranges:
+          T-RE:
+            range: A62:M64
+      ICE 2017:
+        ranges:
+          T-RE:
+            range: A46:M48
+      ICE 2018:
+        ranges:
+          T-RE:
+            range: A46:M48
+      ICE 2019:
+        ranges:
+          T-RE:
+            range: A46:M48
+      ICE 2020:
+        ranges:
+          T-RE:
+            range: A46:M48
+      ICE 2021:
+        ranges:
+          T-RE:
+            range: A46:M50
+      ICE 2022:
+        ranges:
+          T-RE:
+            range: A46:M60
+      ICE 2023:
+        ranges:
+          T-RE:
+            range: A46:M58
+      ICE 2024:
+        ranges:
+          T-RE:
+            range: A46:M58
+      ICE 2025:
+        ranges:
+          T-RE:
+            range: A46:M58
+      ICE 2026:
+        ranges:
+          T-RE:
+            range: A46:M58
+      JASEC 2013:
+        ranges:
+          T-RE:
+            range: A9:M10
+      JASEC 2014:
+        ranges:
+          T-RE:
+            range: A9:M10
+      JASEC 2015:
+        ranges:
+          T-RE:
+            range: A9:M10
+      JASEC 2016:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2017:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2018:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2019:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2020:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2021:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2022:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2023:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2024:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2025:
+        ranges:
+          T-RE:
+            range: A9:M11
+      JASEC 2026:
+        ranges:
+          T-RE:
+            range: A9:M11

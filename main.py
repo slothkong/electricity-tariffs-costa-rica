@@ -13,8 +13,7 @@ from openpyxl.worksheet.worksheet import Worksheet
 from openpyxl.cell.cell import Cell
 
 
-WORKBOOK_URL = os.getenv("WORKBOOK_URL", "https://aresep-my.sharepoint.com/:x:/g/personal/multimedia_aresep_go_cr/ET6L4k-QyphAgLpEwSYeNegBbLvOGM7mF0n2vZxId_SGeQ?e=YGhFZr&download=1")
-WORKBOOK_PATH =  os.getenv("WORKBOOK_PATH", "./kaggle/input/datasets/slothkong/tarifas-electricas-de-costa-rica/Cuadro E-8 Tarifas electricas final.xlsx")
+WORKBOOK_DIR =  os.getenv("WORKBOOK_PATH", "./kaggle/input/datasets/slothkong/electricity-tariffs-costa-rica")
 CONFIG_PATH = os.getenv("CONFIG_PATH", "./kaggle/working/cfgs.yaml")
 DATAFRAME_PATH = os.getenv("DATAFRANE_PATH", "./kaggle/working/electricity-tariffs-costa-rica.csv")
 MONTH_MAPPING = {"enero": "01", "febrero": "02", "marzo": "03", "abril": "04", "mayo": "05", "junio": "06", "julio": "07", "agosto": "08", "septiembre": "09", "octubre": "10", "noviembre": "11", "diciembre": "12"}
@@ -82,13 +81,11 @@ def pivot_table(cell_range: tuple[Cell,])-> DataFrame:
 
     return dataframe
 
-def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataFrame:
+def convert_workbook_to_dataframe(workbook_path: str, cfgs: dict) -> DataFrame:
 
     column_names = ["annio_mes", "annio", "mes", "distribuidor", "tipo_de_tarifa", "bloque_de_tarifa", "colones_por_unidad_de_cobro"]
     is_initial_loop = True
 
-    with open(config_path, "r") as fp:
-        cfgs = yaml.safe_load(fp)
 
     workbook = load_workbook(workbook_path, data_only=True)
     for worksheet_title, worksheets_cfg in cfgs["worksheets"].items():
@@ -121,11 +118,17 @@ def convert_workbook_to_dataframe(workbook_path: str, config_path: str) -> DataF
     return dataframe
 
 def main() -> None:
+
+    with open(CONFIG_PATH, "r") as fp:
+        cfgs = yaml.safe_load(fp)
+
+    workbook_uri = cfgs["workbooks"][0]["uri"]
+    workbook_path = f"{WORKBOOK_DIR}/{cfgs["workbooks"][0]["filename"]}"
+
+    download_workbook(workbook_uri, workbook_path)
+    print(f"Successfully downloaded input workbook from '{workbook_uri}'")
     
-    download_workbook(WORKBOOK_URL, WORKBOOK_PATH)
-    print(f"Successfully downloaded input workbook from '{WORKBOOK_URL}'")
-    
-    dataframe = convert_workbook_to_dataframe(WORKBOOK_PATH, CONFIG_PATH)
+    dataframe = convert_workbook_to_dataframe(workbook_path, cfgs["workbooks"][0])
     
     dataframe.to_csv(DATAFRAME_PATH, index=False)
     print(f"Successfully wrote dataframe to '{DATAFRAME_PATH}'")
