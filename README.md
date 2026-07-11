@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 Optionally, override the local paths for input/output files:
 ```bash
-export WORKBOOK_PATH="./kaggle/input/datasets/slothkong/electricity-tariffs-costa-rica/Cuadro E-8 Tarifas electricas final.xlsx"
+export WORKBOOK_PATH="./kaggle/input/datasets/slothkong/electricity-tariffs-costa-rica"
 export CONFIG_PATH="./kaggle/working/cfgs.yaml"
 export DATAFRAME_PATH="./kaggle/working/electricity-tariffs-costa-rica.csv"
 ```
@@ -52,8 +52,8 @@ python main.py
 
 > **NOTE**: As of version `0.0.1`, configured cell ranges INCLUDE ONLY residential tariff data.
 
-To properly parse the contents of Excel workbooks, this tooling relias on user-provider configuration about which cell ranges are processed.
-The configuration follows the schemae:
+To properly parse the contents of Excel workbooks, this tooling relies on user-provider configuration about which cell ranges are processed.
+The configuration follows the schema:
 ```yaml
 workbooks:
   - uri: https://aresep-my.sharepoint.com/:x:/g/personal/multimedia_aresep_go_cr/ET6L4k-QyphAgLpEwSYeNegBbLvOGM7mF0n2vZxId_SGeQ?e=YGhFZr&download=1
