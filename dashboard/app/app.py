@@ -112,15 +112,15 @@ def plot_figure(dataframe, template=None):
             for tariff_block in dataframe[distributor_mask & tariff_type_mask]["bloque_de_tarifa"].unique():
                 tariff_block_mask = dataframe["bloque_de_tarifa"] == tariff_block
                 
-                name = f"{distributor} - {tariff_block}"
-                x = dataframe[distributor_mask & tariff_type_mask & tariff_block_mask]["annio_mes"]
-                y = dataframe[distributor_mask & tariff_type_mask & tariff_block_mask]["colones_por_unidad_de_cobro"]
-                
+                trace_name = f"{distributor} - {tariff_block}"
+                trace_data = dataframe[distributor_mask & tariff_type_mask & tariff_block_mask][["annio_mes", "colones_por_unidad_de_cobro"]]
+                trace_data.sort_values(by="annio_mes", axis=0, ascending=True, inplace=True)
+
                 fig.add_trace(
                     go.Scatter(
-                        x=x,
-                        y=y,
-                        name=name,
+                        x=trace_data["annio_mes"],
+                        y=trace_data["colones_por_unidad_de_cobro"],
+                        name=trace_name,
                         line=dict(
                                 width=choose_symbol_or_dash_or_width(tariff_block, selection_mode="widths"),
                                 color=COLOR_MAPPING.get(distributor),
@@ -141,7 +141,7 @@ def plot_figure(dataframe, template=None):
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-1.05,
+            y=-1.1,
             xanchor="center",
             x=0.5
         ),
