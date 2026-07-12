@@ -2,12 +2,11 @@
 
 A demo [Dash](https://dash.plotly.com/) application to visualize the [Electricity Tariffs Costa Rica Kaggle Dataset](https://www.kaggle.com/datasets/slothkong/electricity-tariffs-costa-rica).
 
-![Demo Dashboard Screenshot](./docs/figures/demo_dashboard_sreenshot.jpg)
+<img src="./docs/figures/demo_dashboard_screenshot.png" alt="Demo Dashboard" width="900"/>
 
 ## Before You Begin
 
-Make sure the data file is available within your local file system, at the path:
-> `../../kaggle/input/datasets/slothkong/electricity-tariffs-costa-rica/electricity-tariffs-costa-rica.csv`.
+Make sure the data file is available within your local file system, at the path `../../kaggle/input/datasets/slothkong/electricity-tariffs-costa-rica/electricity-tariffs-costa-rica.csv`.
 
 ## Usage
 
