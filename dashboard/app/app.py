@@ -135,6 +135,7 @@ def plot_figure(dataframe, template=None):
 
     fig.update_layout(
         template=template,
+        height=500,
         title=dict(
             text='Price (CRC) per Billing Unit'
         ),
@@ -266,7 +267,8 @@ tab1 = dbc.Tab(
         dcc.Graph(
             id="chart",
             figure=go.Figure(),
-            config={"responsive": True},
+            config={"responsive": False},
+            style={"height": "500px", "width": "100%"},
         )
     ],
     label="Chart",
@@ -295,21 +297,21 @@ app.layout = dbc.Container(
         header,
         dbc.Row([dbc.Col([theme_controls],  xs=12, md=4, lg=2, class_name="h-100",),]),
         dbc.Row([
-            dbc.Col([control1],  xs=12, md=4, lg=4, class_name="h-100",),
-            dbc.Col([control2],  xs=12, md=4, lg=2, class_name="h-100",),
-            dbc.Col([control3],  xs=12, md=4, lg=6, class_name="h-100",),
+            dbc.Col([control1],  xs=12, md=11, lg=4, class_name="h-100",),
+            dbc.Col([control2],  xs=12, md=11, lg=2, class_name="h-100",),
+            dbc.Col([control3],  xs=12, md=11, lg=6, class_name="h-100",),
             ],
         class_name="g-3",
         align="stretch"
         ),
         dbc.Row([
-            dbc.Col([tabs], xs=12, md=4, lg=12),
+            dbc.Col([tabs], xs=12, md=11, lg=12),
             ], 
-        class_name="flex-grow-1 mt-4"
+        class_name="mt-4"
         ),
     ],
     fluid=True,
-    class_name="dbc dbc-ag-grid d-flex flex-column p-3",
+    class_name="dbc dbc-ag-grid p-3",
 )
 
 
@@ -343,16 +345,10 @@ def update(tariff_type, distributor, year_month, color_mode_switch_on):
     return fig, dashGridOptions
 
 clientside_callback(
-    ClientsideFunction(namespace="clientside", function_name="resize_chart"),
-    Output("chart", "style"),
-    Input("tabs", "active_tab"),
-)
-
-clientside_callback(
     ClientsideFunction(namespace="clientside", function_name="toggle_theme"),
     Output("switch", "id"),
     Input("switch", "value"),
 )
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=False, port=8050)
+    app.run(host='0.0.0.0', debug=True, port=8050)
