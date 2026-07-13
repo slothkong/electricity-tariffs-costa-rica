@@ -297,15 +297,15 @@ app.layout = dbc.Container(
         header,
         dbc.Row([dbc.Col([theme_controls],  xs=12, md=4, lg=2, class_name="h-100",),]),
         dbc.Row([
-            dbc.Col([control1],  xs=12, md=4, lg=4, class_name="h-100",),
-            dbc.Col([control2],  xs=12, md=4, lg=2, class_name="h-100",),
-            dbc.Col([control3],  xs=12, md=4, lg=6, class_name="h-100",),
+            dbc.Col([control1],  xs=12, md=11, lg=4, class_name="h-100",),
+            dbc.Col([control2],  xs=12, md=11, lg=2, class_name="h-100",),
+            dbc.Col([control3],  xs=12, md=11, lg=6, class_name="h-100",),
             ],
         class_name="g-3",
         align="stretch"
         ),
         dbc.Row([
-            dbc.Col([tabs], xs=12, md=4, lg=12),
+            dbc.Col([tabs], xs=12, md=11, lg=12),
             ], 
         class_name="mt-4"
         ),
